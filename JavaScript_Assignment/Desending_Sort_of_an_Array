@@ -1,0 +1,20 @@
+// Function to compare two numbers for descending sort
+function compareDesc(a, b) {
+    return b - a;
+}
+
+// Input array from the user
+const inputArrayString = prompt("Enter an array of numbers (input the numbers with comma-separated):");
+
+// Convert the input string to an array of numbers
+const inputArray = inputArrayString.split(',').map(Number);
+
+// Check if the user provided an array
+if (Array.isArray(inputArray) && inputArray.length > 0) {
+    // Sort the array in descending order
+    inputArray.sort(compareDesc);
+
+    console.log("Sorted array in descending order: " + inputArray.join(', '));
+} else {
+    console.log("Invalid input. Please enter a valid array of numbers.");
+}
